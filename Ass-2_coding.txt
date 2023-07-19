@@ -1,0 +1,284 @@
+1)Find output to the following:
+
+a)
+#include<conio.h>
+#include<stdio.h>
+
+void main(int argc,char *argv[])
+{
+//   printf("Hello world");  
+int a=10,b=5,c,d;
+
+c=++a * b++ ;
+d=--c * ++b;
+printf("A:%d,B:%d,C:%d,D:%d",a,b,c,d);
+};
+
+output: A:11,B:7,C:54,D:378
+
+
+b)
+#include<conio.h>
+#include<stdio.h>
+
+void main(int argc,char *argv[])
+{
+//   printf("Hello world");  
+int a=0,b=10,c=0,d=0;
+
+if(++a && ++b)
+{
+    c=a+b; //amx it will exeute....
+}
+else{
+    d=a*b;
+}
+printf("A:%d,B:%d,C:%d,D:%d",a,b,c,d);
+};
+
+output:
+A:1,B:11,C:12,D:0
+
+c)#include<conio.h>
+#include<stdio.h>
+
+void inrc();
+void main(int argc,char *argv[])
+{
+//   printf("Hello world");  
+
+int i;
+for(i=0;i<5;i++)
+{
+    inrc(i);
+}
+
+};
+
+void inrc()
+{
+   int a=0;
+   static int b=0;
+   a=a+1;
+   b=b+1;
+   printf("A:%d,B:%d \n",a,b);
+}
+
+
+output: 
+A:1,B:1 
+A:1,B:2 
+A:1,B:3 
+A:1,B:4 
+A:1,B:5 
+
+2)
+#include<conio.h>
+#include<stdio.h>
+
+//macro...
+#define sqrt(a) a*a
+void main(int argc,char *argv[])
+{
+//   printf("Hello world");  
+
+
+int a=5,b=3,c;
+c=sqrt(a+b);
+printf("C: %d",c);
+};
+
+output:
+C:23
+
+3)
+#include<conio.h>
+#include<stdio.h>
+
+//macro...
+#define swap(a,b) temp=a;a=b;b=temp
+void main(int argc,char *argv[])
+{
+//   printf("Hello world");  
+
+int a=100,b=200,c=0,temp=0;
+if (c>0)
+swap(a,b);
+
+printf("A: %d,B: %d,C: %d,D: %d",a,b,c,temp);
+};
+
+output:  A: 200,B: 0,C: 0,D: 0
+
+
+Ex:
+pattern:
+#include<conio.h>
+#include<stdio.h>
+
+
+void main(int argc,char *argv[])
+{
+    //patterns
+    int i,j,n,sp,z;
+    scanf("%d",&n);
+    sp=n-1;
+    for(i=1;i<=n;i++)
+    {
+        for(z=0;z<sp;z++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=i;j++)
+        {
+            printf("%2d",i);
+        }
+        sp=sp-1; 
+        printf("\n");
+        
+    }
+    
+
+};
+
+10
+          1
+         2 2
+        3 3 3
+       4 4 4 4
+      5 5 5 5 5
+     6 6 6 6 6 6
+    7 7 7 7 7 7 7
+   8 8 8 8 8 8 8 8
+  9 9 9 9 9 9 9 9 9
+10101010101010101010
+
+
+4)
+
+#include<conio.h>
+#include<stdio.h>
+
+
+void main(int argc,char *argv[])
+{
+    //patterns
+    int i,j,n,sp,z,v;
+    scanf("%d",&n);
+    sp=n-1;
+    for(i=1;i<=n;i++)
+    {
+        for(z=0;z<sp;z++)
+        {
+            printf(" ");
+        }
+        
+        
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        
+        for(v=i-1;v>0;v--)
+        {
+            printf("%d",v);
+        }
+        
+        sp=sp-1; 
+        printf("\n");
+        
+    }
+    
+
+};
+
+output:
+
+5
+    1
+   121
+  12321
+ 1234321
+123454321
+
+b)
+
+#include<conio.h>
+#include<stdio.h>
+
+
+void main(int argc,char *argv[])
+{
+    //patterns
+    int i,j,n,sp,z,v;
+    scanf("%d",&n);
+    sp=n-1;
+    for(i=1;i<=n;i++)
+    {
+        for(z=0;z<sp;z++)
+        {
+            printf(" ");
+        }
+        for(v=1;v<=i;v++)
+        {
+            printf("%d",i);
+        }
+        
+        printf("\n");
+        sp=sp-1;
+        
+    }
+    
+
+};
+
+
+5
+    1
+   22
+  333
+ 4444
+55555
+
+
+c)
+#include<conio.h>
+#include<stdio.h>
+
+
+void main(int argc,char *argv[])
+{
+    //patterns
+    int i,j,n,sp,z,v,p;
+    scanf("%d",&n);
+    sp=n-1;
+    p=1;
+    for(i=1;i<=n;i++)
+    {
+        for(z=0;z<sp;z++)
+        {
+            printf(" ");
+        }
+        for(v=1;v<=i;v++)
+        {
+            printf("%2d",p);
+            p=p+1;
+        }
+        
+        printf("\n");
+        sp=sp-1;
+        
+    }
+    
+
+};
+
+6
+      1
+     2 3
+    4 5 6
+   7 8 910
+ 1112131415
+161718192021
+
+
