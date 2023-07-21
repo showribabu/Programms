@@ -6,7 +6,7 @@ def spiral_order(matrix):
         result += matrix.pop(0)
         
         # Append the last element from each remaining row
-        if matrix and matrix[0]:
+        if matrix:
             for row in matrix:
                 result.append(row.pop())
         
@@ -15,7 +15,7 @@ def spiral_order(matrix):
             result += matrix.pop()[::-1]
         
         # Append the first element from each remaining row in reverse order
-        if matrix and matrix[0]:
+        if matrix:
             for row in matrix[::-1]:
                 result.append(row.pop(0))
     
@@ -26,8 +26,7 @@ def spiral_order(matrix):
 n=int(input())
 matrix=[]
 for i in range(n):
-    matrix.append[input().split()]
-
+    matrix.append([int(x) for x in input().split()])
 
 spiral_result = spiral_order(matrix)
 print(spiral_result)  # Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
