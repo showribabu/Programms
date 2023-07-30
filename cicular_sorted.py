@@ -34,10 +34,17 @@ def binary_circular(l):
         if l[mid]<=l[nxt] and l[mid]<=l[prev]:
             return mid 
         
+        '''
         if l[mid] >= l[low]:
             low = (mid + 1) % len(l)
         elif l[mid] <= l[high]:
             high = (mid - 1) % len(l)
+        '''
+        if l[mid]>=l[high]:
+            low=(mid+1)%len(l)
+        elif l[mid]<=l[low]:
+            high=(mid-1)%len(l)
+        
             
             
       
